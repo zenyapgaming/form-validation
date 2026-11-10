@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+main {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  width: min(420px, 90vw);
+}
+
+.field { margin-bottom: 1rem; }
+
+label { display: block; margin-bottom: 0.25rem; font-weight: 600; }
+
+input, select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #475569;
+  border-radius: 6px;
+  background: #0f172a;
+  color: inherit;
+  font: inherit;
+}
+
+/* step 1.6: the pseudo-classes */
+input:user-valid, select:user-valid { border-color: #22c55e; }
+input:user-invalid, select:user-invalid { border-color: #ef4444; }
+
+.error {
+  display: block;
+  min-height: 1.2em; /* stops layout jumping when the message appears */
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #f87171;
+}
+
+button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover { background: #2563eb; }
+
+.message-error { color: #f87171; }
+.message-success { color: #22c55e; font-weight: 600; }
